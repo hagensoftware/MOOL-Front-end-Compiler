@@ -1,0 +1,47 @@
+    
+module interface ILinkList {
+      class interface ILinkedList { 
+          object remove ();
+          void add(object elem);
+          boolean empty ();
+      } 
+     class LinkedList implements ILinkedList{
+        constructors
+            LinkedList (); 
+     }
+}
+
+module LinkList implements ILinkList {
+    class interface ILinkable { }
+    class Linkable implements ILinkable {
+      fields
+         object node = null;
+         Linkable next = null;
+      constructors
+          Linkable (object elem) { node = elem; }
+    }  // class Linkable
+
+    class LinkedList {
+      fields
+         Linkable head= null;
+      constructors
+          LinkedList ( ){ }
+      methods
+          object remove() {
+              object remove = head;
+               if (head == null) { return null; 
+               else {  head = head.next;
+                      return temp;  }
+               }
+          }
+          void add(object elem) {
+              Linkable n = new Linkable(elem);
+         Linkable next = null; //error     
+              n.next = head;
+              this.head = n;
+           }
+          boolean empty( ) {
+               return (this.head == null);
+           }
+   }   // class LinkedList
+}

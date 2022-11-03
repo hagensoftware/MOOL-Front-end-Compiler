@@ -1,0 +1,9 @@
+module Test implements IMain {
+     import Math;
+     void main (string [] args) {
+         float my x = 3.5;
+         float y;
+        // …
+         y = sin(x);
+     }
+}

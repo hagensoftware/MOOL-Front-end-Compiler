@@ -1,0 +1,1 @@
+if 8=9 then begin print 9=8 end else print 99=88

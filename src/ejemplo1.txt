@@ -1,0 +1,30 @@
+// Set of mathematical functions 
+//  and numeric constants
+
+module interface IMath {
+
+     const integer MAXINT = 32565;
+     const float E = 2.71828;
+     const float PI = 3.14159;
+
+     integer abs (integer x) ;
+     float sin (float y) ;
+     float cos (float z) ;
+//   …
+}
+
+
+// Implemenatation of interface IMath
+
+module Math implements IMath {
+    //implements absolute value function
+     integer abs (integer x) {
+        if (x<0) { x=  x*(-1); }
+        return x;
+     }
+   // implements sin function
+     float sin (float x) { return x;}
+    // implements cos function
+     float cos (float x) { return x;}
+ //  …
+}

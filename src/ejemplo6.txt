@@ -1,0 +1,13 @@
+module TestStack implements IMain {
+   import MGenStack;
+   void main () {
+      GenStack<integer> iStack = new GenStack<integer>();  // creates a stack of 10 integer elements
+      GenStack<string> sStack = new GenStack<string>(100);    // creates a stack of 100 float elements
+ 
+      iStack.push(17);
+      integer y = iStack.pop();    // cast operation is not needed before assignment
+     //…
+      sStack.push("hello"); //…   
+   }
+}
+

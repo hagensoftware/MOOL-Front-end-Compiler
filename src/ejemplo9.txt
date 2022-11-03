@@ -1,0 +1,63 @@
+
+module interface IBinaryMethods {
+   import MColor;
+    class interface IPoint {
+        integer getX();
+        integer getY();
+        boolean equal (IPoint p);
+    } 
+    class interface IColorPoint extends IPoint {
+        Color getColor();
+   }
+  class Point implements IPoint {
+      constructors
+         //Point ();
+         Point ( integer x, integer y);
+   } 
+  class ColorPoint extends Point implements IColorPoint {
+      constructors
+         //ColorPoint ();
+         ColorPoint ( integer x, integer y, Color c);
+   } 
+}	
+module MBinaryMethods implements IBinaryMethods {
+   import MColor;
+    class Point {
+      fields
+         integer x=0;
+         integer y=0;
+      constructors
+         //Point () { return this;}
+         Point ( integer x, integer y) {
+                    this.x = x; this.y = y; return this;}
+      methods
+        integer getX() { return this.x; }
+        integer getY() { return this.y; }
+        boolean equal (IPoint p) { 
+                   return (this.x==x && this.y==y); }
+   } 
+   class ColorPoint {
+      fields
+         Color c=Color.BLACK;
+      constructors
+         //ColorPoint () {super(); return this; }
+         ColorPoint ( integer x, integer y, Color c) { 
+              super(x,y);  this.c=c; return this;  }
+      methods
+        Color getColor() { return this.c;}
+        override boolean equal(IPoint p){ 
+//              if (p instanceof ColorPoint ) {return
+//                   (super.equal(p)&&this.c==(ColorPoint)p.c);
+//              else   return super.equal(p);
+              }
+        }
+   }
+
+   void main (String[] args) {
+     // Point p = new Point(1,1);
+      ColorPoint cp = new ColorPoint(2,2,Color.RED);
+      p.equal(cp);
+     cp.equal(p); 
+    //…
+   } 
+}

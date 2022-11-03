@@ -1,0 +1,19 @@
+module SortingData implements IMain {
+   import System;
+   import GenSort;
+
+ // we assume that integer implements IComparable<integer>
+
+   void main( ) {
+      integer [ ] scores = new integer[100];
+     //   put data in array scores
+      for (integer i=0; i<scores.length() -1; i=i+1) {
+        IO.read(scores[i]);
+      }
+     sort (scores);
+     // print the elements of array scores
+      for (integer i=0; i<scores.length() -1; i=i+1) {
+        IO.printLine(" Position "+ i + " Value " + scores[i]);
+      }
+   }
+}

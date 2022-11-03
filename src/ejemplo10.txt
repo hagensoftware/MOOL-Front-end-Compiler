@@ -1,0 +1,7 @@
+module HelloWorld implements IMain {
+     import System;
+     void main (string [] args) {}  // Error!
+     void main (string [] args) { 
+        IO.printLine("Hello World!");
+   }
+}

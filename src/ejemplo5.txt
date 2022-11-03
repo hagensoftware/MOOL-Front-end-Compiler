@@ -1,0 +1,42 @@
+
+module interface MIGenStack {
+    class interface IGenStack <T>{
+        T  pop();
+        void push(T elem);
+        boolean empty ();
+    } 
+   class GenStack<T> implements IGenStack<T> {
+      constructors
+         //GenStack();
+         GenStack( integer max);
+   } 
+}	
+
+module MGenStack implements MIGenStack {
+   import Array;
+   class GenStack<T> {
+       fields
+           T[] store = new T[10];
+           integer size = 0;
+       constructors
+           //GenStack(){ return this; }       
+           GenStack(integer max){ 
+                           store = new T[max];
+                           return this; }   
+      methods
+            T pop() { return store[--size]; }
+             void push(T elem) {
+                if (size >= store.length()) { 
+                     { T [] tmp = new T[size*2];
+                        copy(store, tmp, size);
+                        store = tmp;
+                     }
+                }
+                store[size++] = elem;
+             }
+            boolean empty() {
+                return (size == 0);
+            }
+   }  // class GenStack
+} // module
+

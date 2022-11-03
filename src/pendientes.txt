@@ -1,0 +1,5 @@
+fiedec (shadow)
+bounds (supcla & ints)
+else (SL o Stat?)
+SwiBlo (CL o Case?)
+OUExp (faltan UnaryExpression y CastExpression)

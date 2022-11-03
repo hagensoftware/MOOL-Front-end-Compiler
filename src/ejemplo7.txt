@@ -1,0 +1,29 @@
+// class interface IComparable is defined in 
+// module GenInterfaces 
+//    class interface IComparable <T> {
+//           integer compare (T elem); 
+//     }
+
+module interface IGenericSort {
+    import GenInterfaces;
+    void sort <T implements
+                        IComparable<T>>(T[] d);
+}	
+module GenSort implements IGenericSort {
+    void sort <T implements IComparable<T>> (T[] d){
+       boolean done = false;
+       while (!done) {
+            done = true;
+            for (integer i=0; i<data.length() -1; i=i+1) {
+               if ( data[i].compare( data[i+1]) < 0) {
+                    { T temp = new T (data[i]);
+                       data[i] = data[i+1];
+                       data[i+1] = temp;
+                       done = false;
+                    }
+               }
+            }  //for
+       }  //while
+    }  // sort
+}  // module
+

@@ -1,0 +1,33 @@
+corridas
+pseudocodigo (t.s., semántico, tostring, visitor)
+interpretación
+
+apendice 
+ejemplos mool
+gramatica abstracta modificada
+uml(visitor)
+terminar introduccion
+indice contenido
+indice figuras
+estado del arte
+
+
+BuildSymbolTable---------------------
+Implementation SymbolTable***********
+addClass ModuleImplementation Test
+addMethod GFD main
+addParam FormalParameter args
+addVar LocalVariableDecl x
+addVar LocalVariableDecl y
+End SymbolTable**********************
+TypeCheckStatements------------------
+ModuleImplementation Class Test 
+FormalParameter args
+LocalVariableDecl x
+LocalVariableDecl y
+CheckType AsignmentStat 
+
+0 error(s) 
+Empieza el toString
+null.java
+Test.java

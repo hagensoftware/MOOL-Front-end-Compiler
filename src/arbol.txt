@@ -1,0 +1,10 @@
+
+
+ public class Arbol implements IMain{ 
+import arbol; 
+
+ void  main (string[] args){ 
+double x = 3.5;
+double y;
+y = sin(x); };
+ }
